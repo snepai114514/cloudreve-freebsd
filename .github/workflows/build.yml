@@ -24,6 +24,7 @@ jobs:
           wget https://dl.google.com/go/go1.22.0.freebsd-amd64.tar.gz && tar -C /usr/local -xzf go1.22.0.freebsd-amd64.tar.gz && rm go1.22.0.freebsd-amd64.tar.gz
           ln -s /usr/local/go/bin/go /usr/local/bin/go
         run: |
+          npm install -g yarn
           git clone --recurse-submodules https://github.com/fcurrk/PlusBackend
           cd Plusbackend/assets
           yarn install
