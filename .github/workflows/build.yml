@@ -52,6 +52,7 @@ jobs:
       uses: actions/upload-artifact@main
       with:
         name: cloudreve-freebsd-amd64
+        if-no-files-found: error
         path: |
             cloudreve-freebsd-amd64.tar.gz
 
