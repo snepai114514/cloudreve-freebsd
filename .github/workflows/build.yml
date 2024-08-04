@@ -36,7 +36,7 @@ jobs:
           ln -s /usr/local/go/bin/go /usr/local/bin/go
         run: |
           export LATEST_APP=$(wget -qO- https://api.github.com/repos/cloudreve/Cloudreve/tags | gawk -F '["v]' '/name/{print $4;exit}')
-          git clone--recurse-submodules https://github.com/fcurrk/PlusBackend
+          git clone --recurse-submodules https://github.com/fcurrk/PlusBackend
           cd PlusBackend
           rm -rf assets && mv -f ../linshi1 ./assets && cp ../assets.zip ./assets.zip
           export ldflags="\
