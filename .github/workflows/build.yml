@@ -20,7 +20,7 @@ jobs:
         git clone https://github.com/snepai114514/linshi1
         cd linshi1
         yarn install
-        CI=false yarn build
+        yarn build
         cd build
         find . -name "*.map" -type f -delete
         cd ../.. && zip -r - linshi1/build >assets.zip
